@@ -16,6 +16,7 @@
  #### For storing creds, task data we have used local storage
 
 ## Steps to run the app
+* ### navigat to root directory containing package.json file
 * ### npm install
   * This will install all the dependencies lised in the package-lock.json file
 * ### npm start
