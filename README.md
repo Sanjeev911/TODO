@@ -25,7 +25,7 @@
   
 ## Routes
 * ### /
-  * This redirects to the home page where user can see his/her todo list items
+  * This redirects to the home page where user can see his/her todo list items if logged in.
 * ### /login
   * This redirects to the login page where user can login using his/her credentials
 * ### /signup
