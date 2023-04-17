@@ -27,6 +27,14 @@ const Signup = () => {
       alert("User with above email id already Exists. Please Login with the email id")
       return
     }
+    if (confirmPasswordError) {
+      alert("Please confirm correct password");
+      return;
+    }
+    if (passwordValidationError) {
+      alert("please set correct password");
+      return;
+    }
     const userId = users.length + 1;
     const updatedUsers = [...users, {name, email, password, userId, taskCounter: 0}];
     localStorage.setItem("users", JSON.stringify(updatedUsers))
@@ -96,14 +104,14 @@ const Signup = () => {
       <div className ='signup-box'>
         <h1>Sign up</h1>
           <form onSubmit={handleSubmit} id="signup-form">
-            <label for="name">User Name</label>
+            <label htmlFor="name">User Name</label>
             <input type="text" placeholder="User name" onChange={(e) => {setName(e.target.value)}} name="name" value={name} required></input>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="email" placeholder="Email Id" onChange={(e) => {setEmail(e.target.value)}} name="email" value={email} required></input>
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} onKeyUp={validatePassword} name="password" value={password.password} required></input>
             {passwordValidationError && <p className="text-danger">{passwordValidationError}</p>}
-            <label for="confirmPassword">Confirm Password</label>
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password" placeholder="confirm password" onChange={handlePasswordChange} onKeyUp={validatePassword} name="confirmPassword" value={password.confirmPassword} required></input>
             { confirmPasswordError && <p className="text-danger">{confirmPasswordError}</p>}
             <input type="submit" value="Sign up"/>

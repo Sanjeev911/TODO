@@ -12,37 +12,10 @@ import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import { Button } from "@mui/material";
-
-const getCurrentUserEmail = () => {
-    const currentUserEmail = JSON.parse( localStorage.getItem('currentLoggedInUserEmail'));
-    return currentUserEmail
-}
-
-const getCurrentUserTasks = () => {
-    const currentUserEmail = getCurrentUserEmail();
-    if (currentUserEmail) {
-        const allTasks = JSON.parse(localStorage.getItem("tasks")) ?? {};
-        const userTasks = allTasks[currentUserEmail] ?? [];
-        return userTasks
-    }
-    else {
-        return []
-    }
-}
+import { getCurrentUserTasks,getCurrentUserEmail, updateUserTaskCounter } from '../utility/todo';
 
 const getTaskJSX = (task, setUserTasks, setInput, userTasks) => {
     return <Task task={task} setUserTasks={setUserTasks} setInput={setInput} userTasks={userTasks} key={task.id}/>
-}
-
-const updateUserTaskCounter = () => {
-    const currentUserEmail = getCurrentUserEmail();
-    const allUsers = JSON.parse(localStorage.getItem("users"));
-    const user =  allUsers.find((user) => {
-        return user.email == currentUserEmail
-    })
-
-    user.taskCounter += 1
-    localStorage.setItem("users", JSON.stringify(allUsers))
 }
 
 const Todos = () => {
