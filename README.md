@@ -32,4 +32,12 @@
 * ### /signup
   * This redirects to the signup page where user can sign up using his/her credentials
   
+## Screenshots
+* ### Login
+  * ![Login.png](login.png)
+* ### Signup
+  * ![Signup.png](signup.png)
+* ### Homepage
+  * ![homepage.png](dashboard.png)
+
  
