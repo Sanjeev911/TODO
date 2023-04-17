@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: rgba(100, 115, 255, 1);
+	font-family: sans-serif;
+}
+ .signup-box {
+	width: 30%;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	background-color: rgb(6, 21, 36);
+	border-radius: 20px;
+}
+ .signup-box h1 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: white;
+}
+ .signup-box label {
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 5%;
+	color:white;
+}
+ .signup-box input[type="email"], .signup-box input[type="password"], .signup-box input[type="text"] {
+	width: 90%;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	background: rgb(225, 227, 246);
+	border: none;
+	border-bottom: 2px solid black;
+	color: black;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-right:5%
+}
+ .signup-box input[type="submit"] {
+	width: 50%;
+	background: #4CAF50;
+	border: 2px solid white;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all .5s ease;
+	margin-bottom: 5%;
+	margin-right:25%;
+	margin-left:25%;
+	border-radius:8px;
+}
+.signup-box p {
+    color: red;
+    font-size:15px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+}
+ .signup-box input[type="submit"]:hover {
+	background: rgba(100, 115, 255, 1);
+	color: black;
+}
+
+.login {
+	width: 50%;
+	background: transparent;
+    border:none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all .5s ease;
+	margin-bottom: 10%;
+	margin-right:25%;
+	margin-left:25%;
+}
+.login:hover {
+	background: rgb(6, 21, 36);
+	color: blue;
+}
